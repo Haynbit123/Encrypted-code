@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypted Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #f0f0f0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #333;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        .code-box {
+            background-color: #444;
+            color: #f0f0f0;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            width: 100%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Encrypted Code</h1>
+    <div class="container">
+        <label for="encryptedCode">Encrypted Code is:</label>
+        <textarea id="encryptedCode" class="code-box" readonly rows="6">
+33791093765133792295412533799184309333792295276518940174333799032704390323379903222955328174333794125494041253379615722955328337910937651903222954125
+        </textarea>
+        <button onclick="copyToClipboard()">Copy</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const codeText = document.getElementById("encryptedCode");
+            codeText.select();
+            codeText.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand("copy");
+            alert("Encrypted code copied to clipboard!");
+        }
+    </script>
+
+</body>
+</html>
